@@ -2,7 +2,7 @@
 <div class="body-container">
 	<div class="page">
 		<div class="home-container">
-			<img src="/_imgs/logo.svg" width="250" height="250" class="svg" />
+			<img src="_imgs/logo.svg" width="250" height="250" class="svg" />
 			<div class="app-tag">
 				Rent
 			</div>
