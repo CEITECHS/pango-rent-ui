@@ -1,0 +1,89 @@
+// main: ../ui.sass
+
+$hwidth: 1408
+$dwidth: 1000
+$twidth: 800
+$mwidth: 560
+
+$gutter: 30
+$dgutter: 20
+
+$padding: 18
+
+// @for $i from 1 through $hd_columns
+// 	%hd#{$i}
+// 		box-sizing: border-box
+// 		position: relative
+// 		float: left
+// 		width: 100%
+// 		max-width: ((97.92% * (($hd_width - $hd_gutter) / $hd_columns) * $i) / $hd_width)
+// 		margin: 0 percent($hd_gutter/2, $hd_width + $hd_gutter) percent($hd_gutter, $hd_width + $hd_gutter)
+
+
+// @mixin hd()
+// 	$max_width: 1408
+// 	$columns: 12
+// 	$gutter: 30
+// 	$padding: 18
+// 	@for $i from 1 through $hd_columns
+// 		%hd#{$i}
+// 			display: flex
+// 			box-sizing: border-box
+// 			position: relative
+// 			//float: left
+// 			width: 100%
+// 			max-width: ((97.92% * (($max_width - $gutter) / $columns) * $i) / $max_width)
+// 			margin: 0 percent($gutter/2, $max_width + $gutter) percent($gutter, $max_width + $gutter)
+// 	@content
+//
+// @mixin desktop()
+// 	$max_width: 1024
+// 	$columns: 12
+// 	$gutter: 20
+// 	$padding: 18
+// 	@media screen and (max-width: rem($max_width))
+// 		@for $i from 1 through $hd_columns
+// 			%desktop#{$i}
+// 				display: flex
+// 				box-sizing: border-box
+// 				position: relative
+// 				//float: left
+// 				width: 100%
+// 				max-width: ((97.92% * (($max_width - $gutter) / $columns) * $i) / $max_width)
+// 				margin: 0 percent($gutter/2, $max_width + $gutter) percent($gutter, $max_width + $gutter)
+// 		@content
+@mixin hd()
+	$columns: 12
+
+	@for $i from 1 through $columns
+		%hd#{$i}
+			//box-sizing: border-box
+			flex-basis: 95.7% / $i
+			margin: 0 percent($gutter/2, $hwidth) percent($gutter, $hwidth)
+			//margin: 0 percent($gutter/2, $max-width+$gutter)
+			//margin: 0 percent($gutter/2, $max_width + $gutter) percent($gutter, $max_width + $gutter)
+		%hd-ml#{$i}
+			flex-basis: 98% / $i
+			margin: 0 0 percent($gutter, $hwidth) percent($gutter/2, $hwidth)
+		%hd-mr#{$i}
+			flex-basis: 98% / $i
+			margin: 0 percent($gutter/2, $hwidth) percent($gutter, $hwidth) 0
+	@content
+
+@mixin desktop()
+	$columns: 12
+	@media screen and (max-width: rem($dwidth))
+		@for $i from 1 through $columns
+			%desktop#{$i}
+				flex-basis: 95% / $i
+				margin: 0 percent($dgutter/2, $dwidth) percent($dgutter, $dwidth)
+		@content
+
+@mixin tablet()
+	$columns: 12
+	@media screen and (max-width: rem($twidth))
+		@for $i from 1 through $columns
+			%tablet#{$i}
+				flex-basis: 97% / $i
+				margin: 0 percent($gutter/2, $twidth) percent($gutter, $twidth)
+		@content

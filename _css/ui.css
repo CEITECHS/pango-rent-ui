@@ -1,0 +1,445 @@
+/* 	amount = number of columns the element should span
+	max-width = the maximum width of the primary container
+	columns = the total number of columns (12 and 16 are pretty standard for desktop, but any number will work)
+	!!-- EVERYTHING BELOW IS OPTIONAL --!!
+	height = if you want to define a height (default: auto)
+	margin = define your magins if you want (default: 0 top and bottom, and percentage based on gutter size)
+	padding = define padding size(s) */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+		border: 0;
+		font-family: inherit;
+		font-size: 100%;
+		font-style: inherit;
+		font-weight: inherit;
+		margin: 0;
+		outline: 0;
+		padding: 0;
+		vertical-align: baseline;
+}
+
+:focus {
+		outline: 0;
+}
+
+body {
+		background-color: #eee;
+		line-height: 1;
+}
+
+ol, ul {
+		list-style: none;
+}
+
+table {
+		border-collapse: separate;
+		border-spacing: 0;
+}
+
+caption, th, td {
+		font-weight: normal;
+		text-align: left;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+		content: "";
+}
+
+blockquote, q {
+		quotes: "" "";
+}
+
+a img {
+		border: 0;
+}
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+		display: block;
+}
+
+html {
+		font-family: 'Roboto', 'Helvetica', sans-serif;
+}
+
+.header-title {
+		font-family: 'Roboto Condensed', 'Helvetica', sans-serif;
+		font-size: 5.6875rem;
+		color: #4A4A4A;
+		text-transform: uppercase;
+}
+
+.utility li a {
+		font-size: 1.125rem;
+		font-weight: 700;
+		text-decoration: none;
+		color: #fff;
+}
+
+h1, .back-button {
+		font-size: 1.5rem;
+}
+
+.back-button {
+		text-decoration: none;
+		color: #00A2E0;
+}
+
+.property-info .data .cost, .property-info .location .address {
+		font-size: 1.5rem;
+		font-weight: 700;
+}
+
+.property-info .data .cost span.mini-type, .property-info .location .address span.mini-type {
+		font-size: 0.875rem;
+}
+
+.app-tag {
+		font-family: 'Roboto Condensed', 'Helvetica', sans-serif;
+		font-size: 7.375rem;
+		text-align: center;
+		text-transform: uppercase;
+		color: rgba(155, 155, 155, 0.25);
+}
+
+.generic-button a {
+		font-size: 1.125rem;
+		font-weight: 700;
+		color: #4A4A4A;
+		text-decoration: none;
+		text-transform: uppercase;
+}
+
+footer nav {
+		font-size: 1.125rem;
+		text-align: center;
+}
+
+footer nav a {
+		font-weight: 700;
+		text-decoration: none;
+		color: #fff;
+}
+
+body {
+		width: 100%;
+		height: 100%;
+		background: #fff;
+}
+
+.page-container {
+		width: 100%;
+		height: 100%;
+}
+
+.header {
+		position: fixed;
+		z-index: 999;
+		top: -100%;
+		width: 100%;
+		height: 6.25rem;
+		background: #000;
+		-webkit-transition: top 0.5s ease-in-out 0s;
+		-moz-transition: top 0.5s ease-in-out 0s;
+		-o-transition: top 0.5s ease-in-out 0s;
+		transition: top 0.5s ease-in-out 0s;
+}
+
+.header.show {
+		top: 0;
+}
+
+.logo {
+		position: relative;
+		width: 15.625rem;
+		height: 15.625rem;
+}
+
+.header-container, .body-container, .footer-container {
+		display: table;
+		box-sizing: border-box;
+		position: relative;
+		width: 100%;
+		max-width: 89.875rem;
+		margin: 0 auto;
+		padding: 0 1.875rem;
+}
+
+.header-container a.logo {
+		display: inline-block;
+		position: relative;
+		z-index: 99;
+		float: left;
+		top: 1.125rem;
+		width: 4.0625rem;
+		height: 4.0625rem;
+		margin-right: 0.5625rem;
+}
+
+.header-title {
+		position: relative;
+		top: 0.1875rem;
+}
+
+.utility {
+		position: absolute;
+		bottom: 1.125rem;
+		right: 1.875rem;
+}
+
+.utility li {
+		position: relative;
+		float: left;
+		margin-right: 3.375rem;
+}
+
+.utility li:last-child {
+		margin-right: 0;
+}
+
+h1 {
+		width: 100%;
+		padding: 2.25rem 0;
+		text-align: center;
+}
+
+.body-container {
+		margin: 6.75rem auto;
+}
+
+.home-container {
+		position: relative;
+		width: 15.625rem;
+		margin: 0 auto;
+}
+
+.app-tag {
+		position: relative;
+		left: -0.3125rem;
+		width: 100%;
+		margin-bottom: 1.875rem;
+}
+
+footer {
+		position: fixed;
+		bottom: -100%;
+		width: 100%;
+		height: auto;
+		padding: 1.875rem;
+		background: #000;
+		-webkit-transition: bottom 0.5s ease-in-out 0s;
+		-moz-transition: bottom 0.5s ease-in-out 0s;
+		-o-transition: bottom 0.5s ease-in-out 0s;
+		transition: bottom 0.5s ease-in-out 0s;
+}
+
+footer nav a {
+		margin-right: 9.375rem;
+}
+
+footer nav a:last-child {
+		margin-right: 0;
+}
+
+footer.show {
+		bottom: 0;
+}
+
+.generic-button {
+		position: relative;
+		float: none;
+		width: 100%;
+		margin-bottom: 1.125rem;
+}
+
+.generic-button a {
+		display: block;
+		padding: 1.125rem 0;
+		background: rgba(155, 155, 155, 0.25);
+		text-align: center;
+		-webkit-transition: all 0.25s ease-in-out 0s;
+		-moz-transition: all 0.25s ease-in-out 0s;
+		-o-transition: all 0.25s ease-in-out 0s;
+		transition: all 0.25s ease-in-out 0s;
+}
+
+.generic-button a.blue {
+		background: #00a2e0;
+		color: #fff;
+}
+
+.generic-button:last-child {
+		margin-bottom: 0;
+}
+
+.generic-button:hover a {
+		background: rgba(155, 155, 155, 0.4);
+}
+
+.generic-button:hover a.blue {
+		background: rgba(0, 162, 224, 0.8);
+}
+
+.back-button {
+		position: absolute;
+		left: -100%;
+		padding: 2.25rem 0;
+}
+
+.properties {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: flex-start;
+		width: 100%;
+}
+
+.detail-right, .user-activities .generic-button:last-child {
+		flex-basis: 49%;
+		margin: 0 0 2.13068% 1.06534%;
+}
+
+.detail-left, .user-activities .generic-button:first-child {
+		flex-basis: 49%;
+		margin: 0 1.06534% 2.13068% 0;
+}
+
+.property {
+		flex-basis: 31.9%;
+		margin: 0 1.06534% 2.13068%;
+}
+
+.property img {
+		width: 100%;
+		height: 18.125rem;
+		background: rgba(0, 0, 0, 0.1);
+}
+
+.property:nth-child(3n) {
+		margin-right: 0;
+}
+
+.property:nth-child(3n + 1) {
+		margin-left: 0;
+}
+
+.property-info {
+		margin: 0.1875rem 0 0;
+		padding: 1.125rem;
+		background: #000;
+		color: #fff;
+}
+
+.property-info .data, .property-info .location {
+		display: table;
+		width: 100%;
+}
+
+.property-info .data {
+		margin-bottom: 1.125rem;
+}
+
+.property-info .data .cost {
+		position: relative;
+		float: left;
+}
+
+.property-info .data .cost span.mini-type {
+		margin-right: 0.3125rem;
+}
+
+.property-info .data .details {
+		display: inline-block;
+		position: relative;
+		float: right;
+		text-align: right;
+}
+
+.property-info .data .details .beds, .property-info .data .details .baths, .property-info .data .details .sqm {
+		display: table;
+		position: relative;
+		float: left;
+}
+
+.property-info .data .details .beds, .property-info .data .details .baths {
+		margin-right: 1.125rem;
+}
+
+.property-detail {
+		display: flex;
+		flex-direction: row;
+		justify-content: flex-start;
+		width: 100%;
+}
+
+.property-detail h1 {
+		padding: 0;
+		font-size: 2.25rem;
+		font-weight: 700;
+		text-align: left;
+}
+
+.detail-right, .user-activities .generic-button:last-child {
+		flex-basis: 49%;
+		margin: 0 0 2.13068% 1.06534%;
+}
+
+.detail-left, .user-activities .generic-button:first-child {
+		flex-basis: 49%;
+		margin: 0 1.06534% 2.13068% 0;
+}
+
+.property {
+		flex-basis: 31.9%;
+		margin: 0 1.06534% 2.13068%;
+}
+
+.detail-right .property-info {
+		margin-top: 1.125rem;
+		padding: 0;
+		background: none;
+}
+
+.detail-right .property-info .data {
+		color: #000;
+}
+
+.detail-right .description p {
+		font-size: 1.125rem;
+}
+
+.user-activities {
+		display: flex;
+		flex-direction: row;
+		justify-content: flex-start;
+		width: 100%;
+}
+
+.user-activities .detail-right, .user-activities .generic-button:last-child {
+		flex-basis: 49%;
+		margin: 0 0 2.13068% 1.06534%;
+}
+
+.user-activities .detail-left, .user-activities .generic-button:first-child {
+		flex-basis: 49%;
+		margin: 0 1.06534% 2.13068% 0;
+}
+
+.user-activities .property {
+		flex-basis: 31.9%;
+		margin: 0 1.06534% 2.13068%;
+}
+
+@media screen and (max-width: 62.5rem) {
+		.property {
+				flex-basis: 31.66667%;
+				margin: 0 1% 2%;
+		}
+}

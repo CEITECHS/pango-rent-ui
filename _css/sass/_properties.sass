@@ -1,0 +1,50 @@
+// main: ../ui.sass
+.properties
+	display: flex
+	flex-direction: row
+	flex-wrap: wrap
+	justify-content: flex-start
+	//box-sizing: border-box
+	width: 100%
+@include hd()
+	.property
+		@extend %hd3
+
+		img
+			width: 100%
+			height: rem(290)
+			background: rgba($black, .1)
+	.property:nth-child(3n)
+		margin-right: 0
+	.property:nth-child(3n + 1)
+		margin-left: 0
+.property-info
+	margin: rem(3) 0 0
+	padding: rem($padding)
+	background: $black
+	color: $white
+
+	.data, .location
+		display: table
+		width: 100%
+	.data
+		margin-bottom: rem(getBaseline())
+
+		.cost
+			position: relative
+			float: left
+
+			span.mini-type
+				margin-right: rem(5)
+		.details
+			display: inline-block
+			position: relative
+			float: right
+			text-align: right
+
+			.beds, .baths, .sqm
+				display: table
+				position: relative
+				float: left
+			.beds, .baths
+				margin-right: rem($padding)

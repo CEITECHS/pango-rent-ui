@@ -1,0 +1,16 @@
+{
+  "transport": "ftp",
+  "uploadOnSave": true,
+  "useAtomicWrites": false,
+  "deleteLocal": false,
+  "hostname": "pango.dnsalias.com",
+  "target": "/web/pango/",
+  "ignore": [
+    ".remote-sync.json",
+    ".git/**",
+	"*.sass"
+  ],
+  "username": "quentin",
+  "password": "technorg1",
+  "watch": ["/_css/ui.css"]
+}

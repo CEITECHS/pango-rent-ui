@@ -1,0 +1,35 @@
+// main: ../ui.sass
+.property-detail
+	display: flex
+	flex-direction: row
+	justify-content: flex-start
+	width: 100%
+	h1
+		padding: 0
+		font-size: rem(36)
+		font-weight: 700
+		text-align: left
+@include hd()
+	.detail-left
+		@extend %hd-mr2
+	.detail-right
+		@extend %hd-ml2
+		.property-info
+			margin-top: rem($padding)
+			padding: 0
+			background: none
+			.data
+				color: $black
+		.description
+			p
+				font-size: rem(18)
+.user-activities
+	display: flex
+	flex-direction: row
+	justify-content: flex-start
+	width: 100%
+	@include hd()
+		.generic-button:first-child
+			@extend %hd-mr2
+		.generic-button:last-child
+			@extend %hd-ml2

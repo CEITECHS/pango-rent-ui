@@ -1,0 +1,27 @@
+// main: ../ui.sass
+.generic-button
+	position: relative
+	float: none
+	width: 100%
+	margin-bottom: rem($padding)
+
+	a
+		display: block
+		padding: rem($padding) 0
+		background: rgba($gray, .25)
+		text-align: center
+		@include animate(all, .25s, ease-in-out)
+	a.blue
+		background: rgba($blue, 1)
+		color: $white
+.generic-button:last-child
+	margin-bottom: 0
+.generic-button:hover
+	a
+		background: rgba($gray, .4)
+	a.blue
+		background: rgba($blue, .8)
+.back-button
+	position: absolute
+	left: -100%
+	padding: rem(getBaseline($num: 6)) 0
