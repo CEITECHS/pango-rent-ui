@@ -1,23 +1,30 @@
 // main: ../ui.sass
 .properties
-	display: flex
-	flex-direction: row
-	flex-wrap: wrap
-	justify-content: flex-start
-	//box-sizing: border-box
-	width: 100%
-@include hd()
+	@include flexparent()
+.property
+	@include cols(3, $hpercent, 0 percent($hgutter/2, $hwidth) percent($hgutter, $hwidth))
+	img
+		width: 100%
+		height: rem(290)
+		background: rgba($black, .1)
+.property:nth-child(3n)
+	margin-right: 0
+.property:nth-child(3n+1)
+	margin-left: 0
+@include breakpoint_w($twidth)
 	.property
-		@extend %hd3
-
-		img
-			width: 100%
-			height: rem(290)
-			background: rgba($black, .1)
+		@include cols(2, $tpercent, 0 percent($tgutter/2, $twidth) percent($tgutter, $twidth))
 	.property:nth-child(3n)
+		margin-right: percent($tgutter/2, $twidth)
+	.property:nth-child(3n+1)
+		margin-left: percent($tgutter/2, $twidth)
+	.property:nth-child(2n)
 		margin-right: 0
-	.property:nth-child(3n + 1)
+	.property:nth-child(2n+1)
 		margin-left: 0
+@include breakpoint_w($mwidth)
+	.property
+		@include cols(1, $mpercent, 0 0 percent($mgutter, $mwidth))
 .property-info
 	margin: rem(3) 0 0
 	padding: rem($padding)

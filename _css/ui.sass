@@ -30,9 +30,9 @@ body
 	box-sizing: border-box
 	position: relative
 	width: 100%
-	max-width: rem($hwidth + $gutter)
+	max-width: rem($hwidth + $hgutter)
 	margin: 0 auto
-	padding: 0 rem($gutter)
+	padding: 0 rem($hgutter)
 .header-container
 	a.logo
 		display: inline-block
@@ -49,7 +49,7 @@ body
 .utility
 	position: absolute
 	bottom: rem($padding)
-	right: rem($gutter)
+	right: rem($hgutter)
 
 	li
 		position: relative
@@ -72,19 +72,19 @@ h1
 	position: relative
 	left: rem(-5)
 	width: 100%
-	margin-bottom: rem($gutter)
+	margin-bottom: rem($hgutter)
 footer
 	position: fixed
 	bottom: -100%
 	width: 100%
 	height: auto
-	padding: rem($gutter)
+	padding: rem($hgutter)
 	background: $black
 	@include animate(bottom, .5s, ease-in-out)
 
 	nav
 		a
-			margin-right: rem($gutter*5)
+			margin-right: rem($hgutter*5)
 		a:last-child
 			margin-right: 0
 footer.show
@@ -96,5 +96,3 @@ footer.show
 @import 'sass/properties'
 // Property details
 @import 'sass/property'
-// Desktop
-@import 'sass/desktop'

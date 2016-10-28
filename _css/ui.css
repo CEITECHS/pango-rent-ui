@@ -296,23 +296,12 @@ footer.show {
 .properties {
 		display: flex;
 		flex-direction: row;
-		flex-wrap: wrap;
 		justify-content: flex-start;
 		width: 100%;
 }
 
-.detail-right, .user-activities .generic-button:last-child {
-		flex-basis: 49%;
-		margin: 0 0 2.13068% 1.06534%;
-}
-
-.detail-left, .user-activities .generic-button:first-child {
-		flex-basis: 49%;
-		margin: 0 1.06534% 2.13068% 0;
-}
-
 .property {
-		flex-basis: 31.9%;
+		flex: 0 1 31.91333%;
 		margin: 0 1.06534% 2.13068%;
 }
 
@@ -326,8 +315,34 @@ footer.show {
 		margin-right: 0;
 }
 
-.property:nth-child(3n + 1) {
+.property:nth-child(3n+1) {
 		margin-left: 0;
+}
+
+@media screen and (max-width: 50rem) {
+		.property {
+				flex: 0 1 49.065%;
+				margin: 0 0.9375% 1.875%;
+		}
+		.property:nth-child(3n) {
+				margin-right: 0.9375%;
+		}
+		.property:nth-child(3n+1) {
+				margin-left: 0.9375%;
+		}
+		.property:nth-child(2n) {
+				margin-right: 0;
+		}
+		.property:nth-child(2n+1) {
+				margin-left: 0;
+		}
+}
+
+@media screen and (max-width: 35rem) {
+		.property {
+				flex: 0 1 100%;
+				margin: 0 0 1.78571%;
+		}
 }
 
 .property-info {
@@ -386,19 +401,31 @@ footer.show {
 		text-align: left;
 }
 
-.detail-right, .user-activities .generic-button:last-child {
-		flex-basis: 49%;
-		margin: 0 0 2.13068% 1.06534%;
+.detail-left {
+		flex: 0 1 50%;
+		margin: 0 1.06534% 0 0;
 }
 
-.detail-left, .user-activities .generic-button:first-child {
-		flex-basis: 49%;
-		margin: 0 1.06534% 2.13068% 0;
+.user-activities {
+		display: flex;
+		flex-direction: row;
+		justify-content: flex-start;
+		width: 100%;
 }
 
-.property {
-		flex-basis: 31.9%;
-		margin: 0 1.06534% 2.13068%;
+.user-activities .generic-button:first-child {
+		flex: 0 1 50%;
+		margin: 0 1.06534% 0 0;
+}
+
+.user-activities .generic-button:last-child {
+		flex: 0 1 50%;
+		margin: 0 0 0 1.06534%;
+}
+
+.detail-right {
+		flex: 0 1 50%;
+		margin: 0 0 0 1.06534%;
 }
 
 .detail-right .property-info {
@@ -411,35 +438,6 @@ footer.show {
 		color: #000;
 }
 
-.detail-right .description p {
+.detail-right .property-info .description p {
 		font-size: 1.125rem;
-}
-
-.user-activities {
-		display: flex;
-		flex-direction: row;
-		justify-content: flex-start;
-		width: 100%;
-}
-
-.user-activities .detail-right, .user-activities .generic-button:last-child {
-		flex-basis: 49%;
-		margin: 0 0 2.13068% 1.06534%;
-}
-
-.user-activities .detail-left, .user-activities .generic-button:first-child {
-		flex-basis: 49%;
-		margin: 0 1.06534% 2.13068% 0;
-}
-
-.user-activities .property {
-		flex-basis: 31.9%;
-		margin: 0 1.06534% 2.13068%;
-}
-
-@media screen and (max-width: 62.5rem) {
-		.property {
-				flex-basis: 31.66667%;
-				margin: 0 1% 2%;
-		}
 }
