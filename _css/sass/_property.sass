@@ -1,6 +1,6 @@
 // main: ../ui.sass
 .property-detail
-	@include flexparent()
+	@include flexrow()
 	h1
 		padding: 0
 		font-size: rem(36)
@@ -9,7 +9,7 @@
 .detail-left
 	@include cols(2, 100%, 0 percent($hgutter/2, $hwidth) 0 0)
 .user-activities
-	@include flexparent()
+	@include flexrow()
 	.generic-button:first-child
 		@include cols(2, 100%, 0 percent($hgutter/2, $hwidth) 0 0)
 	.generic-button:last-child
